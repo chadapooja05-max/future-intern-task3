@@ -1,62 +1,76 @@
+
+
 <!DOCTYPE html>
 <html lang="en"> 
     <head> 
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8">
     <title>Coffee World</title>
 
-    <!-- . Font Awesome . -->
+    <!--  Font Awesome  -->
      <link
       rel="stylesheet" 
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.
       css"
       />
 
-      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="style.css"/>
 
 
 </head>
 <body> 
-    <!--Logo (Font Awesome only style)-->
+    <!--Header-->
+    <header class="header">
+    <!-- Logo (Font Awesome only style) -->
     <div class="logo">
-    <i class="fa-thin fa-mug-hot"></i>
+    <i class="fa-solid fa-mug-hot"></i>
+    <span>Coffee World</span>
+    </div>
 
-<!-- Code injected by live-server -->
-<script>
-	// <![CDATA[  <-- For SVG support
-	if ('WebSocket' in window) {
-		(function () {
-			function refreshCSS() {
-				var sheets = [].slice.call(document.getElementsByTagName("link"));
-				var head = document.getElementsByTagName("head")[0];
-				for (var i = 0; i < sheets.length; ++i) {
-					var elem = sheets[i];
-					var parent = elem.parentElement || head;
-					parent.removeChild(elem);
-					var rel = elem.rel;
-					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-					}
-					parent.appendChild(elem);
-				}
-			}
-			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-			var address = protocol + window.location.host + window.location.pathname + '/ws';
-			var socket = new WebSocket(address);
-			socket.onmessage = function (msg) {
-				if (msg.data == 'reload') window.location.reload();
-				else if (msg.data == 'refreshcss') refreshCSS();
-			};
-			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-				console.log('Live reload enabled.');
-				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-			}
-		})();
-	}
-	else {
-		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-	}
-	// ]]>
-</script>
-</body>
-</html>
+    <!-- Navigation -->
+     <nav class="nav"> 
+     <a href="#">Home</a>
+      <a href="#">About</a>
+       <a href="#">Products</a> 
+       <a href="#">Reviews</a>
+
+     </nav>
+    <!-- Menu Button -->
+     <button class="menu-btn"> 
+        <i class="fa-solid fa-bars"></i>
+
+    </button>
+</header>
+<!-- Hero Section -->
+ <section class="hero">
+
+    <div class="hero-content">
+        <h2>
+            Experience <br>
+            <span> Artisan Coffee</span> Bliss
+        </h2>
+
+        
+        <p> 
+            Indulge in premium coffee crafted fom the finest beans,roasted to perfection for true coffee lovers.
+        </p>
+    
+      <br>  
+    <div class="buttons"> 
+    <button class="btn-primary">
+        <i class="fa-solid fa-cart-shopping"></i> Order Now
+    </button>
+
+    <button class="btn-secondary">
+        <i class="fa-solid fa-circle-info"></i>  Learn More
+    </button>
+    </div>
+</div> 
+
+</div>
+</br>
+<div class="hero-image">
+    <img src="coffee-image.jpg" alt="coffee">
+</div>
+ </section>
+    </body>
+    </html>
